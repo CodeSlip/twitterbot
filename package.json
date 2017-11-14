@@ -1,0 +1,22 @@
+{
+  "name": "twitterbot",
+  "version": "1.0.0",
+  "description": "TwitterBot to get all the Likes",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeSlip/twitterbot.git"
+  },
+  "author": "Jason Tissera",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/CodeSlip/twitterbot/issues"
+  },
+  "homepage": "https://github.com/CodeSlip/twitterbot#readme",
+  "dependencies": {
+    "twit": "^2.2.9"
+  }
+}
