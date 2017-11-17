@@ -1,5 +1,5 @@
 {
-  "name": "twitterbot",
+  "name": "Training_Twitterbot",
   "version": "1.0.0",
   "description": "TwitterBot to get all the Likes",
   "main": "bot.js",
