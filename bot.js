@@ -47,47 +47,9 @@ retweet();
 setInterval(retweet, 3000000);
 // grab & retweet as soon as program is running...
 
-var retweet2 = function() {
-  var params = {
-    q: '@VitalikButerin, @vitalikbuterin',
-    result_type: 'recent',
-    lang: 'en'
-  }
-
-  Twitter.get('search/tweets', params, function(err, data) {
-     // if there no errors
-       if (!err) {
-         // grab ID of tweet to retweet
-           var retweetId = data.statuses[0].id_str;
-           // Tell TWITTER to retweet
-           Twitter.post('statuses/retweet/:id', {
-               id: retweetId
-           }, function(err, response) {
-               if (response) {
-                   console.log('Retweeted!!!');
-               }
-               // if there was an error while tweeting
-               if (err) {
-                   console.log('Something went wrong while RETWEETING... Duplication maybe...');
-               }
-           });
-       }
-       // if unable to Search a tweet
-       else {
-         console.log('Something went wrong while SEARCHING...');
-       }
-   });
-}
-
-// grab & retweet as soon as program is running...
-retweet2();
-// retweet in every 50 minutes
-setInterval(retweet2, 3000000);
-// grab & retweet as soon as program is running...
-
 var retweet3 = function() {
   var params = {
-    q: '#smartcontract, #SmartContract',
+    q: '#ethereum, #Ethereum',
     result_type: 'recent',
     lang: 'en'
   }
@@ -119,7 +81,7 @@ var retweet3 = function() {
 
 // grab & retweet as soon as program is running...
 retweet3();
-// retweet in every 50 minutes
+// retweet3 in every 50 minutes
 setInterval(retweet3, 3000000);
 // grab & retweet as soon as program is running...
 
@@ -346,3 +308,47 @@ function ranDom (arr) {
   var index = Math.floor(Math.random()*arr.length);
   return arr[index];
 };
+
+
+// Twice a day post about Training 
+
+var tweet1 = function(){  
+  Twitter.post('statuses/update', {
+	status: "Join @BlockApps for #DeveloperTraining in #SanFrancisco on November 30th & December 1st. Tickets are available here, seats are limited https://www.eventbrite.com/e/blockchain-developer-course-with-blockapps-sunnyvale-tickets-39185721548?aff=erelexpmlt #ethereum #blockchain #smartcontracts"}, 
+	function(err,data,response){
+        	// if there was an error while 'tweeting'
+        	if(err){
+          		console.log('CANNOT BE FAVORITE... Error');
+        		}
+		// it worked!
+        	else{
+          		console.log('Tweeted... Success!!!');
+			}
+	}
+)};
+
+// tweet tweet1 as soon s the program is running
+tweet1();
+// perform this tweet every 12 hours
+setInterval(tweet1, 21600000);
+
+var tweet2 = function(){  
+  Twitter.post('statuses/update', {
+	status: "Join @BlockApps for #DeveloperTraining in #Toronto on December 7th & 8th. Tickets are available here, seats are limited https://www.eventbrite.com/e/blockchain-developer-course-with-blockapps-toronto-tickets-39662925879?aff=es2 #ethereum #blockchain #smartcontracts"}, 
+	function(err,data,response){
+        	// if there was an error while 'tweeting'
+        	if(err){
+          		console.log('CANNOT BE FAVORITE... Error');
+        		}
+		// it worked!
+        	else{
+          		console.log('Tweeted... Success!!!');
+			}
+	}
+)};
+
+// tweet tweet1 as soon s the program is running
+tweet2();
+// perform this tweet every 12 hours
+setInterval(tweet2, 21600000);
+
