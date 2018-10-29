@@ -1,5 +1,5 @@
 {
-  "name": "Training_Twitterbot",
+  "name": "Herd_Twitterbot",
   "version": "1.0.0",
   "description": "TwitterBot to get all the Likes",
   "main": "bot.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodeSlip/twitterbot.git"
+    "url": "git+https://github.com/CodeSlip/Herdtwitterbot.git"
   },
   "author": "Jason Tissera",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/CodeSlip/twitterbot/issues"
+    "url": "https://github.com/CodeSlip/herdtwitterbot/issues"
   },
-  "homepage": "https://github.com/CodeSlip/twitterbot#readme",
+  "homepage": "https://github.com/CodeSlip/herdtwitterbot#readme",
   "dependencies": {
     "twit": "^2.2.9"
   }
